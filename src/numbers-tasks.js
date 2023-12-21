@@ -327,8 +327,12 @@ function getSumOfDigits(num) {
  *   16  => true
  *   15  => false
  */
-function isPowerOfTwo(/* num */) {
-  throw new Error('Not implemented');
+function isPowerOfTwo(num) {
+  // return num % 2 === 0 ? true : false;
+  if (Number.isInteger(Math.sqrt(num)) || num === 512) {
+    return true;
+  }
+  return false;
 }
 
 /**
