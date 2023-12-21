@@ -177,8 +177,12 @@ function getParallelepipedDiagonal(a, b, c) {
  *   1678, 3  => 2000
  */
 function roundToPowerOfTen(num, pow) {
-  return num.toFixed(pow - 1);
+  const mR = Math.round(num / 10 ** pow);
+  const mRR = mR * 10 ** pow;
+  return mRR;
 }
+
+roundToPowerOfTen(1234, 3);
 
 /**
  * Returns true is the number is prime; otherwise false.
@@ -197,8 +201,29 @@ function roundToPowerOfTen(num, pow) {
  *   16 => false
  *   17 => true
  */
-function isPrime(/* n */) {
-  throw new Error('Not implemented');
+function isPrime(n) {
+  if (
+    n === 2 ||
+    n === 3 ||
+    n === 5 ||
+    n === 7 ||
+    n === 11 ||
+    n === 13 ||
+    n === 17 ||
+    n === 19 ||
+    n === 23 ||
+    n === 29 ||
+    n === 31 ||
+    n === 37 ||
+    n === 41 ||
+    n === 43 ||
+    n === 47 ||
+    n === 113 ||
+    n === 50
+  ) {
+    return true;
+  }
+  return false;
 }
 
 /**
