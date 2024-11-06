@@ -299,7 +299,6 @@ function getSumToN(n) {
     arr.push(i);
     i += 1;
   }
-  // console.log(arr)
   return arr.reduce((a, b) => a + b, 0);
 }
 
@@ -331,7 +330,6 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  // return num % 2 === 0 ? true : false;
   if (Number.isInteger(Math.sqrt(num)) || num === 512) {
     return true;
   }
